@@ -12,9 +12,9 @@ state ストリートファイターV結果集計 :/admin/post/get_data_street_f
 state 最新LP取得 : /admin/post/get_latest_lp
 state カテゴリカウント : /admin/post/get_title_count
 
-投稿 --> ストリートファイターV結果集計
-投稿 --> 最新LP取得
-投稿 --> カテゴリカウント
+ ストリートファイターV結果集計 --> 投稿
+最新LP取得 --> 投稿
+カテゴリカウント --> 投稿 
 
 state カテゴリ : /admin/category
 state カテゴリ編集 :/admin/category/edit
