@@ -1,0 +1,24 @@
+@startuml
+ [*] -> 投稿一覧
+ 投稿一覧 -> ログイン
+
+state ログイン認証 {
+ ログイン --> 投稿リスト
+ 投稿リスト --> 投稿
+ 投稿リスト --> カテゴリ
+ 投稿リスト --> 自己紹介
+ 投稿リスト ---> Map閲覧
+ 投稿リスト ---> Map編集
+}
+
+ 投稿一覧 : /
+ ログイン : /login
+ 投稿リスト : /admin/list
+ 投稿 : /admin/form/{id?}
+ カテゴリ : /admin/category
+ 自己紹介 : /admin/introduction
+ Map閲覧 : /adminintroduction/mapview
+ Map編集 : /adminintroduction/map
+
+
+@enduml
