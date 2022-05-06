@@ -1,0 +1,36 @@
+@startuml
+
+left to right direction
+
+state 投稿詳細 : /article/{id?}
+state コメント追加:/comment/post
+
+投稿詳細 --> コメント追加
+
+state 投稿 : /admin/form/{id?}
+state ストリートファイターV結果集計 :/admin/post/get_data_street_fighter_v
+state 最新LP取得 : /admin/post/get_latest_lp
+state カテゴリカウント : /admin/post/get_title_count
+
+投稿 --> ストリートファイターV結果集計
+投稿 --> 最新LP取得
+投稿 --> カテゴリカウント
+
+state カテゴリ : /admin/category
+state カテゴリ編集 :/admin/category/edit
+state カテゴリ削除 :/admin/category/delete
+
+カテゴリ --> カテゴリ編集
+カテゴリ --> カテゴリ削除
+
+ state Map編集 :/adminintroduction/map
+ state Mapデータ取得:/adminintroduction/map/getdata
+ state Mapデータ送信:/adminintroduction/map/postdata
+ state Mapデータ削除:/adminintroduction/map/deletedata
+ 
+ Map編集 <-- Mapデータ取得
+ Map編集 --> Mapデータ送信
+ Map編集 --> Mapデータ削除
+
+
+@enduml

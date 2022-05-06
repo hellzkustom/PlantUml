@@ -1,0 +1,30 @@
+@startuml
+
+left to right direction
+
+state 投稿詳細 : /article/{id?}
+state コメント削除:/comment/delete
+
+投稿詳細 --> コメント削除
+
+state 投稿 : /admin/form/{id?}
+state 投稿送信 : /admin/post
+state 投稿イメージ送信 : /admin/post/image
+state 投稿削除 :/admin/delete
+
+投稿 --> 投稿送信
+投稿 --> 投稿イメージ送信
+投稿 --> 投稿削除
+
+state 自己紹介 : /admin/introduction
+state 自己紹介編集 : /admin/introduction/edit
+state 自己紹介イメージ送信 :/admin/introduction/postimg
+state 自己紹介イメージ設定 :/admin/introduction/setimg
+state 自己紹介イメージ削除 :/admin/introduction/deleteimg
+
+自己紹介 -->自己紹介編集
+自己紹介 -->自己紹介イメージ送信
+自己紹介 -->自己紹介イメージ設定
+自己紹介 -->自己紹介イメージ削除
+
+@enduml 
